@@ -1,0 +1,2 @@
+# LeetCodeDoc
+LeetCode Document
