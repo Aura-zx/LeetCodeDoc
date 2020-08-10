@@ -1,10 +1,25 @@
+### 632 Smallest Range Covering Elements from K Lists
+
+### 问题
+> You have k lists of sorted integers in ascending order. Find the smallest range that includes at least one number from each of the k lists.
+
+> We define the range [a,b] is smaller than range [c,d] if b-a < d-c or a < c if b-a == d-c.
+
+    Input: [[4,10,15,24,26], [0,9,12,20], [5,18,22,30]]
+    Output: [20,24]
+    Explanation: 
+    List 1: [4, 10, 15, 24,26], 24 is in range [20,24].
+    List 2: [0, 9, 12, 20], 20 is in range [20,24].
+    List 3: [5, 18, 22, 30], 22 is in range [20,24].
+
+
 ### 解题思路
 
 设一共有 n 个数组，每次循环访问每个数组的一个元素得到 k1...kn 个元素，
-1）计算 n 个元素中的最大区间，也就是 [mix(k1...kn), max(k1...kn)]
-2）当这个区间的长度变小，替换它
-3）每次迭代只替换 k1...kn 数组中最小的那个值
-4）当最小值的元素已经是它所在数组的最后一个元素就停止，得到最终的结果
+1. 计算 n 个元素中的最大区间，也就是 [mix(k1...kn), max(k1...kn)]
+2. 当这个区间的长度变小，替换它
+3. 每次迭代只替换 k1...kn 数组中最小的那个值
+4. 当最小值的元素已经是它所在数组的最后一个元素就停止，得到最终的结果
 
 ### 代码
 
