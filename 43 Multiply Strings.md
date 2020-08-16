@@ -13,7 +13,8 @@ Converting the input string to integer is NOT allowed.
 You should NOT use internal library such as BigInteger.
 
 **Analysis:**
-
+ 
+ 0. 两个字符串相乘时乘数和结果之间的下标关系：n1[i] * n2[j] = result[i+j+1]
  1. 用字符串完成大数的乘法。
  2. 考虑正常两个数字的乘法过程，按照过程计算即可。
  3. 因为在乘的过程中，需要加上目标位置当前的数字，需要考虑进来，剩下的carry的设置和处理和#2问题是一致的。
